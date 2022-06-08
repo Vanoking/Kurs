@@ -1,9 +1,9 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "QThread"
-QPushButton *buttoon[12];
-bool life[12];
-int naibors[12];
+QPushButton *buttoon[12];//сылки на кнопки
+bool life[12];//номер места
+int naibors[12];//кол-во соседей
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -17,7 +17,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_clicked()//шаг
+void MainWindow::on_pushButton_clicked()//шаг и обновление всех состояний
 {
     for(int i = 0; i <12;++i)
     {
